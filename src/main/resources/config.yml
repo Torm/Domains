@@ -1,0 +1,13 @@
+# Domains configuration.
+
+# Database settings.
+database:
+  # Type of database. Only SQLITE currently.
+  type: SQLITE
+  # Settings for SQLite database.
+  sqlite:
+    # The database file path (relative to server root).
+    path: plugins/Domains/database.db
+    # The preappended string to each table name.
+    # Leave the string empty to append nothing.
+    prefix: ""

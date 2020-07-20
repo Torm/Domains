@@ -1,0 +1,30 @@
+name: Domains
+version: 1.0.0
+description: Players can claim land.
+author: Torm
+main: no.hyp.domains.Domains
+commands:
+  holding:
+    description: Create and manage domains.
+    aliases: [domains, hold]
+permissions:
+  holding.user:
+    description: Create and delete owned domains, claim and transfer land and add owners and members.
+    default: true
+  holding.info.other:
+    description: List and get information about domains of other players.
+    default: true
+  holding.stats:
+    description: View holding statistics.
+    default: true
+  holding.admin.access:
+    description: Access to build and interact anywhere.
+    default: op
+  holding.admin:
+    description: Manage domains that you do not own.
+    default: op
+    children:
+      holding.user: true
+      holding.info.other: true
+      holding.admin.access: true
+
